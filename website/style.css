@@ -1,0 +1,356 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  background-image: url(images/c.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/*#app{
+    display: grid;
+    grid-auto-rows: minmax(150px, auto);
+    /* grid-template-columns:  *
+    height:100vh;
+    background: #f23557;
+    color: #f0d43a;
+    justify-content: center;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}*/
+header {
+  /*min-height: 80px;*/
+  background-color: #1e202b;
+  color: #fff;
+}
+
+header::after {
+  content: attr(heading-app);
+  position: absolute;
+  width: 40%;
+  height: 40px;
+  background: #009bd87c;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  left: 50%;
+  transform: translatex(-50%);
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  height: 100%;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+.log h2 {
+  margin: 0 30px;
+  margin-left: auto;
+  max-width: 100%;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav li {
+  margin: 5px 0;
+}
+nav ul a {
+  padding: 7px 15px;
+  margin: 0 4px;
+  color: inherit;
+  text-transform: capitalize;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+}
+nav ul a.active,
+nav ul a:hover {
+  border: 2px solid #009ad8;
+  color: #009ad8;
+  border-radius: 17px;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+.userdata {
+  margin: 20px 0;
+}
+
+.userdata .holder {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.userdata .zip input {
+  padding: 20px 15px;
+  max-width: 100;
+  width: 80%;
+  outline-style: none;
+  border: none;
+  border-radius: 25px;
+  background: #1e202b;
+  color: #009ad8;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.userdata .feel textarea {
+  padding: 20px 15px;
+
+  width: 80%;
+  height: 76px;
+  outline-style: none;
+  border: none;
+  border-radius: 25px;
+  background: #1e202b;
+  color: #009ad8;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 30px 0 30px 0;
+}
+
+.userdata .feel button {
+  display: block;
+  margin: 11px 16px;
+  border-radius: 30px;
+  padding: 7px 38px;
+  border: none;
+  outline: none;
+}
+
+.holder.entry {
+  overflow: hidden;
+}
+#entryHolder {
+  border-radius: 15px;
+  border: 2px solid rgb(255 255 255 / 3%);
+  width: 50%;
+  /*  height: 192px; */
+  background: rgb(163 165 163 / 80%);
+  color: #fff;
+  margin: auto;
+  padding: 16px;
+  transform: translateY(-700px);
+  transition: 1s;
+}
+.errorCatch {
+  margin: auto;
+  text-align: center;
+  background: linear-gradient(355deg, #ffffff8f, rgb(0, 0, 0, 46%));
+  /* padding: 20px; */
+  border-radius: 15px;
+  color: #fff;
+}
+#err {
+  line-height: 70px;
+}
+.maimdata {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  /*padding: 20px 0;*/
+}
+
+.maimdata .icon img {
+  max-height: 111px;
+  margin: -25px 0;
+  max-width: 100%;
+  width: 109px;
+  padding: 0;
+}
+
+.maimdata > div {
+  flex: 1 1 1rem;
+  text-align: center;
+}
+
+.maimdata #temp {
+  /*  flex:1 1 1rem */
+  text-align: center;
+  padding: 15px 0;
+}
+
+.discription h2 {
+  text-align: center;
+  /*margin: 10px 0;*/
+  margin-bottom: 15px;
+}
+
+.extra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.extra > div {
+  margin: auto;
+  text-align: center;
+}
+
+.extra > div:not(:last-child) {
+  border-right: 2px solid #fff;
+  /*  padding-right: 15px; */
+  padding: 10px 15px 10px 0;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 790px) {
+  header::after {
+    width: 69%;
+    line-height: 40px;
+    letter-spacing: 0px;
+    font-weight: 700;
+    font-size: 17px;
+  }
+
+  #entryHolder {
+    width: 84%;
+  }
+
+  .maimdata > div {
+    flex: 1 1 5rem;
+  }
+
+  .extra {
+    display: flex;
+    /* flex-direction: column;*/
+    justify-content: center;
+    /* align-items: center; */
+    padding: 20px 0;
+  }
+
+  .extra > div:not(:last-child) {
+    /*  width: 100%;*/
+    display: block;
+    /*  justify-content: space-between;*/
+    border-bottom: 2 px solid #fff;
+    /* border-right: none;*/
+    padding: 15px 7px;
+    margin-bottom: 15px;
+  }
+
+  #content {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #entryHolder {
+    width: 100%;
+  }
+
+  .extra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 20px 0;
+  }
+
+  .extra > div:not(:last-child) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2 px solid #fff;
+    border-right: none;
+    padding: 15px 7px;
+    margin-bottom: 15px;
+  }
+}
+
+span {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+/*
+label{
+    display:block;
+    font-size: 27px;
+}
+
+input{
+    display:block;
+    height: 60px;
+    width: 320px;
+    background:#22b2da;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+button{
+    width: 400px;
+    height: 100px;
+    background: #3b4a6b;
+    color: #f0d43a;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+}
+h1{
+    font-size: 36px;
+}
+*/
+textarea {
+  /* background:#22b2da;
+    color: #f0d43a;
+    font-size: 20px;*/
+  font-family: "Oswald", sans-serif;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+}

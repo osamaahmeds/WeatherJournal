@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="images/weather.ico" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>weather</title>
+</head>
+
+<body>
+    <header heading-app=" Weather Journal App">
+        <nav>
+            <div class="logo">
+                <img src="images/weather.ico" alt="log">
+                <h2>company name</h2>
+            </div>
+            <ul>
+               <!--- <li><a href="#">home</a></li>
+                <li><a href="#">news</a></li>
+                <li><a href="#">guide</a></li> -->
+                <li><a class="active" href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="userdata">
+            <div class="holder zip">
+                <!--  <label for="zip">Enter Zipcode here</label> -->
+                <input type="text" id="zip" placeholder="enter zip code here">
+
+            </div>
+            <div class="holder feel">
+                <!-- <label for="feelings">How are you feeling today?</label> -->
+                <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="4"
+                    cols="20"></textarea>
+                <br>
+                <button id="generate" type="submit"> Generate </button>
+            </div>
+        </section>
+        <section class="holder entry">
+            <!--  <div class =""> -->
+            <!--  <div class = "title">Most Recent Entry</div> -->
+            <div class="errorCatch">
+                <h1 id="err"></h1>
+            </div>
+            <div id="entryHolder">
+
+                <div class="maimdata">
+                    <div class="datecity">
+                        <div class="city">
+                            <h2 id="cityName"></h2>
+                        </div>
+                        <div class="date">
+                            <h3 id="date"></h3>
+                        </div>
+                    </div>
+
+
+                    <div class="icon">
+                        <img id="icon" src="images/animated/weather.svg" alt="">
+                    </div>
+                    <div class="temp">
+                        <h2><span id="temp"></span> <span> <sup>o</sub></span>C</h2>
+                        <div class="discription">
+                            <h2 id="discription"></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="extra">
+                    <div class="wind">
+                        <h3 class="fal fa-wind"><span id="wind"></span> km/h</h3>
+                        <h4>wind</h4>
+                    </div>
+                    <div class="humidity">
+                        <h3 class="fal fa-humidity"> <span id="humidity"></span> %</h3>
+                        <h4> humidity</h4>
+                    </div>
+                    <div class="pressure">
+
+
+                        <h3><img width="18px" src="images/animated/barometer-svgrepo-com.svg" alt=""><span
+                                id="pressure"> </span> </h3>
+                        <h4>pressure</h4>
+                    </div>
+                    <div class="content">
+                        <h4>your feelings are</h4>
+                        <h3 id="content"></h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
