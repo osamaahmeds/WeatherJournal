@@ -196,23 +196,8 @@ or
 
 
 
-## Contact & Authors
-Created by [@Ahmed Sabry](mrsabry134@gmail.com) - feel free to contact me!
-- Github [@AhmedSabry70](https://github.com/AhmedSabry70/)
-- Linkedin [@Ahmed Sabry](https://www.linkedin.com/in/%D9%90ahmedsabry/)
 
-# Feedback
 
-If you have any feedback, please reach out to us at mrsabry134@gmail.com
 
-## Support
 
-For support, email mrsabry134@gmail.com 
 
-## License
-
-Distributed under the MIT License. See LICENSE for more information.[MIT](/LICENSE.txt)
-
-## Copyright
-
-&copy; http://ahmedsabry.tk, Inc. All rights reserved.
